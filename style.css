@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #333;
+    color: #d2b48c;
+    line-height: 1.6;
+    position: relative; /* Set position relative for absolute children */
+    overflow: auto; /* Prevent overflow from the particles */
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -5; /* Keep it behind other content */
+}
+
+
+/* Header */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: fixed; /* Change to fixed to keep it at the top */
+    top: 0; /* Stick it to the top */
+    left: 0;
+    right: 0; /* Ensure it spans the full width */
+    z-index: 10; /* Ensure it appears above other content */
+    transition: top 0.3s; /* Smooth transition for showing/hiding */
+}
+
+.blur {
+    filter: blur(5px); /* Adjust the blur intensity as needed */
+    transition: filter 0.3s; /* Smooth transition for the blur effect */
+}
+
+.logo {
+    width: 6%;
+    height: 12%; /* Change height back to 40px for a square logo */
+    color: #d2b48c; /* Fill color for the overlay */
+    fill: #d2b48c;
+    outline: #d2b48c;
+}
+
+nav a {
+    color: #d2b48c;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.search-container {
+    display: flex;
+    gap: 0.5rem;
+    position: relative; /* Add this to position the icon */
+}
+
+.search-container input[type="text"] {
+    padding: 0.4rem;
+    border: 1px solid #d2b48c;
+    border-radius: 20px;
+    color: #fff; /* Change text color to white */
+    background: transparent; /* Set background to transparent */
+    transition: border-color 0.3s;
+    padding-right: 40px; /* Add padding for the icon */
+}
+
+.search-container input[type="text"]:focus {
+    border-color: #fff; /* Keep focus border color */
+    outline: none;
+}
+
+.search-icon {
+    position: absolute; /* Position the icon absolutely */
+    right: 10px; /* Position it inside the input field */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center the icon */
+    width: 20px; /* Set a suitable width for the icon */
+    height: 20px; /* Set a suitable height for the icon */
+    cursor: pointer; /* Show pointer on hover */
+}
+
+
+.search-container button:hover {
+    background-color: #d2b48c; /* Button hover color */
+    color: #333; /* Button hover text color */
+}
+
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    color: #d2b48c;
+    position: relative;
+    margin-top: 25%;
+}
+
+.hero h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #d2b48c;
+    margin-bottom: 3rem;
+}
+
+.social-links {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    color: #d2b48c;
+    margin-bottom: -70px;
+}
+
+.social-links a {
+    display: block;
+    margin-bottom: 8px;
+    border-bottom: 2px solid #555;
+}
+
+.social-links img {
+    width: 28px;
+    height: 28px;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.social-links img:hover {
+    filter: none;
+}
+
+/* Project Section */
+.projects {
+    text-align: center;
+    padding: 2rem;
+    padding-bottom: 30px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 20px;
+}
+
+.project-card {
+    background-color: #555;
+    border-radius: 15px;
+    padding: 2rem;
+    border: 1px solid #d2b48c;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    margin-bottom: 1rem;
+}
+
+.pill-btn {
+    color: #d2b48c;
+    border: 1px solid #d2b48c;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    background: none;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pill-btn:hover {
+    background-color: #d2b48c;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #444;
+    color: #d2b48c;
+    border-radius: 8px;
+}
+
+footer a {
+    color: #d2b48c;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.social-links {
+    display: flex; /* Change to flex to arrange icons in a row */
+    justify-content: center; /* Center the icons */
+    margin: 20px 0; /* Add some margin for spacing */
+}
+
+.social-links a {
+    margin: 0 10px; /* Add horizontal margin for spacing between icons */
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .social-links {
+        position: absolute; /* Keep the absolute position on larger screens */
+        right: 20px; /* Original right positioning */
+        bottom: 20px; /* Original bottom positioning */
+        flex-direction: column; /* Change to column for larger screens */
+        margin-bottom: -70px; /* Keep the original margin */
+    }
+
+    .hero {
+        text-align: center;
+        padding: 4rem 1rem;
+        color: #d2b48c;
+        position: relative;
+        margin-top: 10%;
+    }
+    .hero h1 {
+        font-size: 2.8rem;
+        margin-bottom: 0.5rem;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+    .subtitle {
+        font-size: 1.5rem;
+        color: #d2b48c;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Skills Section */
+.skills {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #d2b48c;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.skill-card {
+    background-color: #555;
+    border-radius: 15px;
+    padding: 1rem;
+    transition: transform 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-logo {
+    width: 60px; /* Adjust the size as needed */
+    height: 60px; /* Adjust the size as needed */
+    border-radius: 25%; /* Round edges */
+    margin-bottom: 1rem; /* Space between logo and title */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
+
+.about {
+    text-align: center;
+    padding: 4rem 1rem; /* Background color for the section */
+    color: #d2b48c; /* Text color */
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.project-logo {
+    width: auto; /* Adjust the size as needed */
+    height: 70px; /* Adjust the size as needed */
+    border-radius: 25%; /* Round edges */
+    margin-bottom: 1rem; /* Space between logo and title */
+}

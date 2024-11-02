@@ -15,6 +15,8 @@ body {
     overflow: auto; /* Prevent overflow from the particles */
 }
 
+
+
 #particles-js {
     position: fixed;
     top: 0;
@@ -30,27 +32,32 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    position: fixed; /* Change to fixed to keep it at the top */
-    top: 0; /* Stick it to the top */
+    padding: 1rem 2rem; /* Added more horizontal padding for spacing */
+    background: rgba(34, 34, 34, 0.8); /* Semi-transparent dark background */
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow for depth */
+    position: fixed; /* Keeps the header at the top */
+    top: 0;
     left: 0;
-    right: 0; /* Ensure it spans the full width */
-    z-index: 10; /* Ensure it appears above other content */
-    transition: top 0.3s; /* Smooth transition for showing/hiding */
+    right: 0; /* Full width */
+    z-index: 10; /* Stays above other content */
+    transition: top 0.5s ease, background 0.3s ease; /* Smooth transitions */
 }
 
 .blur {
-    filter: blur(5px); /* Adjust the blur intensity as needed */
-    transition: filter 0.3s; /* Smooth transition for the blur effect */
+    filter: blur(5px); /* Blur effect */
+    transition: filter 0.5s; /* Smooth transition for blur effect */
 }
 
 .logo {
-    width: 6%;
-    height: 12%; /* Change height back to 40px for a square logo */
-    color: #d2b48c; /* Fill color for the overlay */
-    fill: #d2b48c;
-    outline: #d2b48c;
+    width: auto; /* Set a specific width for better control */
+    height: 60px; /* Keep aspect ratio */
+    margin-left: -45px;
+    fill: #d2b48c; /* Logo color */
+    transition: transform 0.3s; /* Animation for logo hover */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
 }
 
 nav a {
@@ -58,34 +65,64 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-weight: 500;
-    transition: color 0.3s;
+    font-size: 1rem; /* Larger font size for better readability */
+    transition: color 0.3s, transform 0.3s; /* Smooth color and transform transition */
 }
 
 nav a:hover {
     color: #fff;
     text-decoration: underline;
+    transform: translateY(-2px); /* Subtle lift effect on hover */
 }
 
 .search-container {
     display: flex;
+    align-items: center; /* Center icon and input vertically */
     gap: 0.5rem;
-    position: relative; /* Add this to position the icon */
+    position: relative;
 }
 
 .search-container input[type="text"] {
-    padding: 0.4rem;
+    padding: 0.4rem 1rem; /* Increased padding for comfort */
     border: 1px solid #d2b48c;
-    border-radius: 20px;
-    color: #fff; /* Change text color to white */
-    background: transparent; /* Set background to transparent */
-    transition: border-color 0.3s;
-    padding-right: 40px; /* Add padding for the icon */
+    border-radius: 50px; /* More modern rounded shape */
+    color: #fff; /* White text color */
+    background: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+    transition: border-color 0.3s, background 0.3s; /* Smooth transition */
 }
 
 .search-container input[type="text"]:focus {
-    border-color: #fff; /* Keep focus border color */
-    outline: none;
+    border-color: #fff; /* Focus border color */
+    outline: none; /* Remove outline */
+    background: rgba(255, 255, 255, 0.2); /* Change background on focus */
 }
+
+.search-icon {
+    position: absolute; /* Position icon within input */
+    right: 15px; /* Position inside input */
+    transform: translateY(-50%); /* Center the icon */
+    width: 20px; /* Icon width */
+    height: 20px; /* Icon height */
+    cursor: pointer; /* Pointer on hover */
+    color: #d2b48c; /* Icon color */
+}
+
+.search-container button {
+    background-color: #d2b48c; /* Button color */
+    color: #333; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 50px; /* Rounded button */
+    padding: 0.5rem 1rem; /* Padding for button */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.search-container button:hover {
+    background-color: #fff; /* Button hover color */
+    color: #d2b48c; /* Button hover text color */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
 
 .search-icon {
     position: absolute; /* Position the icon absolutely */
@@ -109,7 +146,7 @@ nav a:hover {
     text-align: center;
     padding: 4rem 1rem;
     color: #d2b48c;
-    position: relative;
+    position: relative; /* Positioning for absolute children */
     margin-top: 25%;
 }
 
@@ -125,12 +162,12 @@ nav a:hover {
     margin-bottom: 3rem;
 }
 
+/* Move the social links into the hero section */
 .social-links {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
+    position: absolute; /* Position it relative to the hero section */
+    right: 20px; /* Align as needed */
+    bottom: 1100px; /* Adjust as needed */
     color: #d2b48c;
-    margin-bottom: -70px;
 }
 
 .social-links a {
@@ -138,6 +175,18 @@ nav a:hover {
     margin-bottom: 8px;
     border-bottom: 2px solid #555;
 }
+
+.social-links img {
+    width: 28px;
+    height: 28px;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.social-links img:hover {
+    filter: none;
+}
+
 
 .social-links img {
     width: 28px;
@@ -177,9 +226,11 @@ nav a:hover {
 }
 
 .project-card h3 {
-    margin-bottom: 1rem;
+    margin-bottom: 4rem;
 }
-
+.project-card p {
+    margin-bottom: 1.5rem;
+}
 .pill-btn {
     color: #d2b48c;
     border: 1px solid #d2b48c;
@@ -190,6 +241,7 @@ nav a:hover {
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+
 }
 
 .pill-btn:hover {
@@ -203,7 +255,9 @@ footer {
     padding: 1rem;
     background-color: #444;
     color: #d2b48c;
-    border-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 100%;
 }
 
 footer a {
@@ -234,7 +288,7 @@ footer a:hover {
         right: 20px; /* Original right positioning */
         bottom: 20px; /* Original bottom positioning */
         flex-direction: column; /* Change to column for larger screens */
-        margin-bottom: -70px; /* Keep the original margin */
+        margin-bottom: 950px; /* Keep the original margin */
     }
 
     .hero {
@@ -254,7 +308,53 @@ footer a:hover {
         color: #d2b48c;
         margin-bottom: 1rem;
     }
+    .search-container {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        position: relative;
+    }
+    
+    .search-container input[type="text"] {
+        padding: 0.4rem 1rem;
+        border: 1px solid #d2b48c;
+        border-radius: 50px;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.1);
+        transition: border-color 0.3s, background 0.3s;
+        display: none; /* Hide input initially */
+    }
+    
+    .search-container button {
+        background-color: #d2b48c;
+        color: #333;
+        border: none;
+        border-radius: 50px;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+        display: none; /* Hide button initially */
+    }
+    
+    .search-icon {
+        cursor: pointer;
+        color: #d2b48c;
+    }
+    
+    
 }
+
+/* Adjustments for mobile screens */
+@media (max-width: 767px) {
+    .social-links {
+        position: absolute; /* Keep the absolute position on mobile */
+        right: 30%; /* Original right positioning */
+        bottom: 50px; /* Move up the icons by increasing the bottom value */
+        flex-direction: row; /* Change to row for mobile screens */
+        margin-bottom: 440px; /* Reset margin for a cleaner look */
+    }
+}
+
 
 /* Skills Section */
 .skills {
@@ -299,11 +399,15 @@ footer a:hover {
     text-align: center;
     padding: 4rem 1rem; /* Background color for the section */
     color: #d2b48c; /* Text color */
+    margin-top: 80px;
+    font-size: 190%;
 }
 
 .about h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    margin-top: 5rem;
+
 }
 
 .about p {
@@ -317,3 +421,142 @@ footer a:hover {
     border-radius: 25%; /* Round edges */
     margin-bottom: 1rem; /* Space between logo and title */
 }
+ul {
+    display: none;
+  }
+
+  .image-container {
+    width: 250px; /* Adjust as necessary */
+    height: 250px; /* Adjust as necessary */
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px auto; /* Center the image container */
+    position: relative;
+    box-shadow: 0 0 10px #d2b48c; /* Initial soft glow */
+    transition: box-shadow 0.3s ease; /* Smooth transition for glow */
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+    object-position: top; /* Show the top part of the image */
+    transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+/* Enhanced glowing effect on hover */
+.image-container:hover {
+    box-shadow: 0 0 20px #d2b48c, 0 0 40px #a08869, 0 0 60px #63523c; /* Stronger glow */
+    animation: pulse 1s infinite; /* Add pulsing animation on hover */
+}
+
+.image-container:hover .profile-image {
+    transform: scale(1.05); /* Slightly scale up the image on hover */
+}
+
+/* Pulse animation for the glow effect */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 20px #d2b48c, 0 0 40px #a08869, 0 0 60px #63523c;
+    }
+    50% {
+        box-shadow: 0 0 30px #d2b48c, 0 0 50px #a08869, 0 0 70px #63523c; /* Intensified glow */
+    }
+    100% {
+        box-shadow: 0 0 20px #d2b48c, 0 0 40px #a08869, 0 0 60px #63523c;
+    }
+}
+.graphic-work {
+    margin: 2rem 0; /* Add margin for spacing */
+}
+
+.graphic-grid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 1.5rem; /* Space between cards */
+    margin-top: 20px;
+    
+}
+
+.graphic-card {
+    background: rgba(255, 255, 255, 0.1); /* Background color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 1rem; /* Padding around the card */
+    text-align: center; /* Center text */
+    align-items: center; /* Center horizontally */
+    justify-content: center;
+}
+
+.graphics-card {
+    background: rgba(255, 255, 255, 0.1); /* Background color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 1rem; /* Padding around the card */
+    padding-top: 4rem;
+
+}
+
+.graphic-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    
+}
+
+.graphics-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    margin-top: 20px;
+    
+}
+.graphic-description {
+    margin-top: 0.5rem; /* Space between image and text */
+    color: #fff; /* Text color */
+}
+.graphics-description {
+    margin-top: 5rem; /* Space between image and text */
+    color: #fff; /* Text color */
+}
+.contact {
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.contact h2 {
+    text-align: center;
+}
+
+.contact label {
+    display: block;
+    margin-top: 10px;
+}
+
+.contact input, .contact select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact button {
+    color: #d2b48c;
+    border: 1px solid #d2b48c;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    background: none;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 1rem;
+}
+
+.contact button:hover {
+    background-color: #d2b48c;
+    color: #333;
+}
+

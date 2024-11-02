@@ -4,27 +4,31 @@
   <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Me</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#portfolio.html">Portfolio</a></li>
+        <li><a href="#contact.html">Contact</a></li>
         <li>Social Links
             <ul>
-                <li><a href="https://linkedin.com/in/yourprofile">LinkedIn</a></li>
-                <li><a href="https://twitter.com/yourhandle">Twitter</a></li>
-                <li><a href="https://instagram.com/yourhandle">Instagram</a></li>
+                <li><a href="https://za.linkedin.com/in/lethabo-mohaladi-4387622a6?trk=people-guest_people_search-card">LinkedIn</a></li>
+                <li><a href="https://twitter.com/1lethxbo">Twitter</a></li>
+                <li><a href="https://instagram.com/1lethxbo">Instagram</a></li>
             </ul>
         </li>
     </ul>
   <!-- Basic Meta Tags -->
-  <title>Lethabo Mohaladi - Front-End Developer & Graphic Designer | Hierarchy Digital</title>
+  <title>Lethabo Mohaladi - Web Developer & Graphic Designer | Hierarchy Digital</title>
   <meta charset="UTF-8">
   <meta name="description" content="Explore the portfolio of Lethabo Mohaladi, a self-taught front-end developer and graphic designer, and owner of Hierarchy Digital, specializing in modern web development and creative digital solutions.">
   <meta name="keywords" content="Lethabo Mohaladi, Front-End Developer, Graphic Designer, Hierarchy Digital, Web Development, Digital Design, Self-Taught Developer">
   <meta name="author" content="Lethabo Mohaladi">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+
 
   <!-- Open Graph / Facebook Meta Tags -->
   <meta property="og:title" content="Lethabo Mohaladi - Front-End Developer & Graphic Designer | Hierarchy Digital">
@@ -43,28 +47,12 @@
   <link rel="canonical" href="https://hierarchydigital.github.io/lethabomohaladi/index.html">
 
   <!-- Favicons -->
-  <link rel="icon" href="https://hierarchydigital.github.io/lethabomohaladi/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" sizes="180x180" href="https://hierarchydigital.github.io/lethabomohaladi/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://hierarchydigital.github.io/lethabomohaladi/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://hierarchydigital.github.io/lethabomohaladi/favicon-16x16.png">
+  <link rel="icon" href="IMAGES/LETHABO MOHALADI LOGO.png" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="IMAGES/LETHABO MOHALADI LOGO.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="IMAGES/LETHABO MOHALADI LOGO.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="IMAGES/LETHABO MOHALADI LOGO.png">
 
-  <!-- Structured Data (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Person",
-    "name": "Lethabo Mohaladi",
-    "jobTitle": "Front-End Developer & Graphic Designer",
-    "url": "https://hierarchydigital.github.io/lethabomohaladi/index.html",
-    "sameAs": [
-      "https://linkedin.com/in/lethabomohaladi",
-      "https://twitter.com/1lethxbo",
-      "https://instagram.com/1lethxbo"
-    ],
-    "image": "https://hierarchydigital.github.io/lethabomohaladi/images/profile-image.jpg",
-    "description": "Lethabo Mohaladi, a self-taught front-end developer and graphic designer, is the founder of Hierarchy Digital, a digital design company specializing in innovative web development and graphic design solutions."
-  }
-  </script>
+
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="styles.css">
@@ -79,8 +67,8 @@
         <div class="header-content">
             <img src="IMAGES\LETHXBO LOGO.png" alt="Logo" class="logo">
             <nav>
-                <a href="index.html">About</a>
-                <a href="#portfolio">Portfolio</a>
+                <a href="#about">About</a>
+                <a href="#portfolio">Projects</a>
                 <a href="#contact">Contact</a>
             </nav>
             <div class="search-container">
@@ -93,9 +81,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <h1>Hi, I'm Lethabo Mohaladi</h1>
-        <p class="subtitle">Python Developer & Graphic Designer</p>
+
         <div class="social-links">
             <a href="https://twitter.com/1lethxbo" target="_blank"><img src="IMAGES\x.png" alt="x"></a>
             <a href="https://za.linkedin.com/in/lethabo-mohaladi-4387622a6?trk=people-guest_people_search-card" target="_blank"><img src="IMAGES\linkedin.png" alt="LinkedIn"></a>
@@ -103,11 +89,17 @@
         </div>
     </section>
     <section id="about" class="about">
+        <div class="image-container">
+            <img src="IMAGES/amu.JPG" alt="Lethabo Mohaladi" class="profile-image">
+        </div>
+        <h1 id="typing-title"></h1>
+        <p class="subtitle" id="typing-subtitle"></p>
         <h2>About Me</h2>
-        <p>
-            As a seasoned web designer and developer, I specialize in creating visually stunning and highly functional websites that elevate brands and engage audiences. With a keen eye for aesthetics and a deep understanding of user experience, I seamlessly blend design and technology to deliver exceptional digital solutions.
-        </p>
-        </section>
+<p>
+    As a seasoned web designer and developer, I specialize in creating visually stunning and highly functional websites that elevate brands and engage audiences. With a keen eye for aesthetics and a deep understanding of user experience, I seamlessly blend design and technology to deliver exceptional digital solutions.
+</p>
+
+    </section>
 <!-- Skills Section -->
 <section id="skills" class="skills">
     <h2>My Coding Skills</h2>
@@ -127,8 +119,8 @@
             <h3>JavaScript</h3>
         </div>
         <div class="skill-card">
-            <img src="IMAGES\Python-logo-notext.svg.png" alt="Python Logo" class="skill-logo">
-            <h3>Python</h3>
+            <img src="IMAGES/Logomark_Full Color.svg" alt="Firebase Logo" class="skill-logo">
+            <h3>Firebase</h3>
         </div>
         <div class="skill-card">
             <img src="IMAGES\Adobe_Photoshop_CC_icon.svg.png" alt="Adobe Photoshop Logo" class="skill-logo">
@@ -142,30 +134,150 @@
     </div>
 </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="projects">
-        <h2>My Projects</h2>
-        <div class="project-grid">
-            <!-- Project Cards -->
-            <div class="project-card">
-                <img src="IMAGES\BROWN LOGO.png" alt="Quiz Brawl" class="project-logo">
-                <p></p>
-                <a href="https://hierarchydigital.github.io/Quiz-Brawl/" class="pill-btn">View Project</a>
+<!-- Portfolio Section -->
+<section id="portfolio" class="projects">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+        <!-- Project Cards -->
+        <div class="project-card">
+            <img src="IMAGES/BROWN LOGO.png" alt="Quiz Brawl" class="project-logo">
+            <p class="project-description">An engaging quiz game to test your knowledge.</p>
+            <a href="https://hierarchydigital.github.io/Quiz-Brawl/" class="pill-btn">View Project</a>
+        </div>
+        <div class="project-card">
+            <img src="IMAGES/DCS DRAFT WHT.png" alt="Destiny Construction" class="project-logo">
+            <p class="project-description">Your go-to platform for construction services.</p>
+            <a href="https://www.destinyconstruction.online" class="pill-btn">View Project</a>
+        </div>
+        <div class="project-card">
+            <img src="IMAGES/whitelogo.png" alt="Alpha Code Editor" class="project-logo"> <!-- Update with actual logo path -->
+            <p class="project-description">A powerful code editor featuring a built-in terminal for developers.</p>
+            <a href="https://hierarchydigital.github.io/AlphaCodeEditor/" class="pill-btn">View Project</a> <!-- Update with actual URL -->
+        </div>
+        <div class="project-card">
+            <img src="https://img.icons8.com/ios/1000/google-wallet.png" alt="FinLume" class="project-logo"> <!-- Update with actual logo path -->
+            <p class="project-description">A modern financial management app designed for convenience and efficiency.</p>
+            <a href="https://hierarchydigital.github.io/FinLume/" class="pill-btn">View Project</a> <!-- Update with actual URL -->
+        </div>
+        <!-- Add more projects as needed -->
+    </div>
+    <section class="graphic-work">
+        <h2>Graphic Design Work</h2>
+        <div class="graphic-grid">
+            <!-- Graphic Work Cards -->
+            <div class="graphic-card">
+                <img src="IMAGES/BROWN LOGO.png" alt="Graphic Work 1" class="graphic-logo"> <!-- Update with actual graphic path -->
+                <p class="graphic-description">A modern logo design for a tech startup.</p>
             </div>
-            <div class="project-card">
-                <img src="IMAGES\DCS DRAFT WHT.png" alt="Destiny Construction" class="project-logo">
-                <p></p>
-                <a href="https://www.destinyconstruction.online" class="pill-btn">View Project</a>
+            <div class="graphic-card">
+                <img src="IMAGES/HD GLOBE LOGO (WHITE FILL).png" alt="Graphic Work 2" class="graphic-logo"> <!-- Update with actual graphic path -->
+                <p class="graphic-description">A logo for a Digital/Design Company.</p>
             </div>
-            <!-- Add more projects here -->
+            <div class="graphics-card">
+                <img src="IMAGES/ferg.png" alt="Graphic Work 3" class="graphics-logo"> <!-- Update with actual graphic path -->
+                <p class="graphics-description">A logo for a Real estate startup.</p>
+            </div>
+            <div class="graphic-card">
+                <img src="IMAGES/MOHALADI CAPITAL HOLDINGS LOGO.png" alt="Graphic Work 3" class="graphic-logo"> <!-- Update with actual graphic path -->
+                <p class="graphic-description">A logo for a Holding company.</p>
+            </div>
+            <!-- Add more graphic works as needed -->
         </div>
     </section>
+    <section id="contact" class="contact">
+        <h2>Get in touch</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="countryCode">Country Code:</label>
+            <select id="countryCode" name="countryCode" required>
+                <option value="+1">+1 (USA)</option>
+                <option value="+27">+27 (South Africa)</option>
+                <option value="+44">+44 (UK)</option>
+                <!-- Add more country codes as needed -->
+            </select>
+    
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+    
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    
+</section>
+
+
 
     <!-- Footer -->
     <footer id="contact">
-        <p>&copy; 2024 Lethabo Mohaladi | <a href="#">Contact Me</a></p>
+        <p>&copy; 2024 Lethabo Mohaladi | <a href="#contact">Contact Me</a></p>
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- Firebase SDK (include before your custom script) -->
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAk2y5uUlrA1zXzBY70Dfbl3Pd3EqGrGTE",
+      authDomain: "lethabo-8f77d.firebaseapp.com",
+      projectId: "lethabo-8f77d",
+      storageBucket: "lethabo-8f77d.firebasestorage.app",
+      messagingSenderId: "131425959274",
+      appId: "1:131425959274:web:3c20af40c4d8d2d1ae3913"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  
+    // Initialize Firestore
+    const db = getFirestore(app);
+  
+    // Function to save contact data
+    async function saveContactData(name, email, countryCode, phone) {
+      try {
+        await addDoc(collection(db, "contacts"), {
+          name: name,
+          email: email,
+          countryCode: countryCode,
+          phone: phone
+        });
+        alert("Contact details submitted successfully!");
+      } catch (e) {
+        console.error("Error adding document: ", e);
+        alert("Error submitting form: " + e.message);
+      }
+    }
+  
+    // Form submission handler
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+  
+      // Capture form data
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const countryCode = document.getElementById('countryCode').value;
+      const phone = document.getElementById('phone').value;
+  
+      // Save data to Firestore
+      saveContactData(name, email, countryCode, phone);
+  
+      // Reset form
+      document.getElementById('contactForm').reset();
+    });
+  </script>
+  
+    
 </body>
 </html>

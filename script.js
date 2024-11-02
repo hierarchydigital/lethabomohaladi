@@ -231,3 +231,41 @@ document.querySelectorAll('.project-card img').forEach((img) => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const titleText = "Hi, I'm Lethabo Mohaladi";
+    const subtitleText = "Web Developer & Graphic Designer";
+
+    function typeEffect(element, text, delay) {
+        let index = 0;
+        const interval = setInterval(() => {
+            if (index < text.length) {
+                element.textContent += text.charAt(index);
+                index++;
+            } else {
+                clearInterval(interval);
+            }
+        }, delay);
+    }
+
+    const titleElement = document.getElementById("typing-title");
+    const subtitleElement = document.getElementById("typing-subtitle");
+
+    typeEffect(titleElement, titleText, 50); // Typing effect for the title
+    setTimeout(() => {
+        typeEffect(subtitleElement, subtitleText, 100); // Typing effect for the subtitle
+    }, titleText.length * 50 + 50); // Delay subtitle until title finishes
+});
+function toggleSearch() {
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+
+    // Toggle visibility of the search input and button
+    if (searchInput.style.display === "none" || searchInput.style.display === "") {
+        searchInput.style.display = "block"; // Show input
+        searchButton.style.display = "block"; // Show button
+        searchInput.focus(); // Focus on input for user convenience
+    } else {
+        searchInput.style.display = "none"; // Hide input
+        searchButton.style.display = "none"; // Hide button
+    }
+}

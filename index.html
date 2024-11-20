@@ -58,26 +58,26 @@
   <link rel="stylesheet" href="styles.css">
 
 </head>
-
-
 <body>
     <div id="particles-js"></div>
     <!-- Header -->
     <header>
-        <div class="header-content">
-            <img src="IMAGES\LETHXBO LOGO.png" alt="Logo" class="logo">
-            <nav>
-                <a href="#about">About</a>
-                <a href="#portfolio">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
+        <nav>
+            <div class="menu-toggle">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <ul class="nav-links">
+              <li><a href="#about">About</a></li>
+              <li><a href="#portfolio">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
             <div class="search-container">
                 <input type="text" id="search" placeholder="Search...">
                 <img src="IMAGES\search24.png" alt="Search" class="search-icon" onclick="performSearch()">
             </div>
-            
-            
-        </div>
+          </nav>
     </header>
 
     <!-- Hero Section -->
@@ -276,6 +276,15 @@
       // Reset form
       document.getElementById('contactForm').reset();
     });
+
+    const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  navLinks.classList.toggle('active');
+});
+
   </script>
   
     

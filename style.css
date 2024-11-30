@@ -118,7 +118,9 @@ nav {
     position: relative;
 
 }
-
+.menu-toggl{
+    z-index: -5; /* Keep it behind other content */
+}
 .search-container input[type="text"] {
     padding: 0.4rem 1rem; /* Increased padding for comfort */
     border: 1px solid #ffffff;
@@ -478,7 +480,7 @@ footer a:hover {
         right: 30%; /* Original right positioning */
         bottom: 50px; /* Move up the icons by increasing the bottom value */
         flex-direction: row; /* Change to row for mobile screens */
-        margin-bottom: 3570px; /* Reset margin for a cleaner look */
+        margin-bottom: 3500px; /* Reset margin for a cleaner look */
     }
 }
 

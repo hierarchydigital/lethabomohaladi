@@ -3,17 +3,71 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    color: #ffffff;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #333;
-    color: #d2b48c;
+    background-color: #000000;
+    color: #ffffff;
     line-height: 1.6;
     position: relative; /* Set position relative for absolute children */
     overflow: auto; /* Prevent overflow from the particles */
 }
-
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.1); 
+    backdrop-filter: blur(10px); 
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: -1px;
+    transition: backdrop-filter 0.3s ease, background 0.3s ease;
+  }
+  
+  .header .logo img {
+    height: 40px;
+    width: auto;
+    margin-top: 12px;
+    margin-left: -50px;
+  }
+  
+  .header nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .header nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .header nav a:hover {
+    color: rgba(255, 255, 255, 0.8);;
+  }
+  
+  .header .cta {
+    padding: 10px 15px;
+    background: #5a5a5a;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .header .cta:hover {
+    background: #5a5a5a;
+  }
+  
+  
 nav {
     display: flex;
     justify-content: flex-end; /* Aligns nav content to the right */
@@ -44,6 +98,7 @@ nav {
   flex-direction: column;
   cursor: pointer;
   gap: 4px;
+
 }
 
 /* Hamburger line styles */
@@ -54,19 +109,19 @@ nav {
   transition: 0.3s;
   display: flex;
   justify-content: flex-start;
+
 }
 
 .search-container {
     display: flex;
-    align-items: center; /* Center icon and input vertically */
-    gap: 1.5rem;
+    gap: 0.5rem;
     position: relative;
-    margin-left: 10px;
+
 }
 
 .search-container input[type="text"] {
     padding: 0.4rem 1rem; /* Increased padding for comfort */
-    border: 1px solid #d2b48c;
+    border: 1px solid #ffffff;
     border-radius: 50px; /* More modern rounded shape */
     color: #fff; /* White text color */
     background: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
@@ -86,11 +141,11 @@ nav {
     width: 20px; /* Icon width */
     height: 20px; /* Icon height */
     cursor: pointer; /* Pointer on hover */
-    color: #d2b48c; /* Icon color */
+    color: #ffffff; /* Icon color */
 }
 
 .search-container button {
-    background-color: #d2b48c; /* Button color */
+    background-color: #ffffff; /* Button color */
     color: #333; /* Button text color */
     border: none; /* Remove border */
     border-radius: 50px; /* Rounded button */
@@ -101,7 +156,7 @@ nav {
 
 .search-container button:hover {
     background-color: #fff; /* Button hover color */
-    color: #d2b48c; /* Button hover text color */
+    color: #ffffff; /* Button hover text color */
     transform: scale(1.05); /* Slight zoom on hover */
 }
 
@@ -118,8 +173,8 @@ nav {
 
 
 .search-container button:hover {
-    background-color: #d2b48c; /* Button hover color */
-    color: #333; /* Button hover text color */
+    background-color: #ffffff; /* Button hover color */
+    color: #ffffff; /* Button hover text color */
 }
 
 
@@ -129,9 +184,9 @@ nav {
   .nav-links {
     position: absolute;
     top:65px;
-    left: -35px;
+    left: 230px;
     width: 45%;
-    background: #333;
+    background: #202020;
     flex-direction: column;
     align-items: center;
     gap: 10px;
@@ -145,20 +200,7 @@ nav {
     display: flex; /* Show hamburger on mobile */
   }
 
-  .header nav {
-    position: absolute;
-    top: 75px;
-    left: -35px;
-    width: 40%;
-    background: #fff;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    display: none;
-    padding: 15px;
-    border-radius: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
+
 }
 
 /* Show nav links when the menu toggle is active */
@@ -177,22 +219,6 @@ nav {
 }
 
 
-/* Header */
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem; /* Added more horizontal padding for spacing */
-    background: rgba(34, 34, 34, 0.8); /* Semi-transparent dark background */
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow for depth */
-    position: fixed; /* Keeps the header at the top */
-    top: 0;
-    left: 0;
-    right: 0; /* Full width */
-    z-index: 10; /* Stays above other content */
-    transition: top 0.5s ease, background 0.3s ease; /* Smooth transitions */
-}
-
 .blur {
     filter: blur(5px); /* Blur effect */
     transition: filter 0.5s; /* Smooth transition for blur effect */
@@ -201,8 +227,8 @@ nav {
 .logo {
     width: auto; /* Set a specific width for better control */
     height: 60px; /* Keep aspect ratio */
-    margin-left: -45px;
-    fill: #d2b48c; /* Logo color */
+    margin-left: -50px;
+    fill: #ffffff; /* Logo color */
     transition: transform 0.3s; /* Animation for logo hover */
 }
 
@@ -210,27 +236,14 @@ nav {
     transform: scale(1.1); /* Slight zoom on hover */
 }
 
-nav a {
-    color: #d2b48c;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: 500;
-    font-size: 1rem; /* Larger font size for better readability */
-    transition: color 0.3s, transform 0.3s; /* Smooth color and transform transition */
-}
 
-nav a:hover {
-    color: #fff;
-    text-decoration: underline;
-    transform: translateY(-2px); /* Subtle lift effect on hover */
-}
 
 
 /* Hero Section */
 .hero {
     text-align: center;
     padding: 4rem 1rem;
-    color: #d2b48c;
+    color: #ffffff;
     position: relative; /* Positioning for absolute children */
     margin-top: 5%;
 }
@@ -243,16 +256,16 @@ nav a:hover {
 
 .subtitle {
     font-size: 1rem;
-    color: #d2b48c;
-    margin-bottom: 3rem;
+    color: #ffffff;
+    margin-bottom: 30px;
 }
 
 /* Move the social links into the hero section */
 .social-links {
     position: absolute; /* Position it relative to the hero section */
     right: 20px; /* Align as needed */
-    bottom: 1050px; /* Adjust as needed */
-    color: #d2b48c;
+    bottom: 100px; /* Adjust as needed */
+    color: #ffffff;
 }
 
 .social-links a {
@@ -270,6 +283,7 @@ nav a:hover {
 
 .social-links img:hover {
     filter: none;
+    color: #fff;
 }
 
 
@@ -282,6 +296,7 @@ nav a:hover {
 
 .social-links img:hover {
     filter: none;
+    color: #fff;
 }
 
 /* Project Section */
@@ -295,14 +310,13 @@ nav a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .project-card {
-    background-color: #555;
-    border-radius: 15px;
-    padding: 2rem;
-    border: 1px solid #d2b48c;
+    background-color: #222222;
+    border-radius: 30px;
+    padding: 1.5rem;
     transition: transform 0.3s;
 }
 
@@ -317,10 +331,10 @@ nav a:hover {
     margin-bottom: 1.5rem;
 }
 .pill-btn {
-    color: #d2b48c;
-    border: 1px solid #d2b48c;
+    color: #ffffff;
+    border: 1px solid #ffffff;
     padding: 0.5rem 1.5rem;
-    border-radius: 50px;
+    border-radius: 30px;
     background: none;
     font-size: 1rem;
     text-decoration: none;
@@ -330,36 +344,35 @@ nav a:hover {
 }
 
 .pill-btn:hover {
-    background-color: #d2b48c;
-    color: #333;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #444;
-    color: #d2b48c;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    background-color: #000000;
+    color: #0260b8;
     width: 100%;
 }
 
 footer a {
-    color: #d2b48c;
+    color: #646464;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
 }
 
 footer a:hover {
-    color: #fff;
-    text-decoration: underline;
+    color: #7e7e7e;
+    text-decoration: none;
 }
 .social-links {
     display: flex; /* Change to flex to arrange icons in a row */
     justify-content: center; /* Center the icons */
     margin: 20px 0; /* Add some margin for spacing */
+    color: #fff;
 }
 
 .social-links a {
@@ -368,18 +381,24 @@ footer a:hover {
 
 /* Responsive adjustments */
 @media (min-width: 768px) {
+    .header .logo img {
+        height: 40px;
+        width: auto;
+        margin-top: 12px;
+        margin-left: -160px;
+      }
     .social-links {
         position: absolute; /* Keep the absolute position on larger screens */
         right: 20px; /* Original right positioning */
         bottom: 20px; /* Original bottom positioning */
         flex-direction: column; /* Change to column for larger screens */
-        margin-bottom: 1950px; /* Keep the original margin */
+        margin-bottom: 1650px; /* Keep the original margin */
     }
 
     .hero {
         text-align: center;
         padding: 4rem 1rem;
-        color: #d2b48c;
+        color: #ffffff;
         position: relative;
         margin-top: 10%;
     }
@@ -390,19 +409,19 @@ footer a:hover {
     }
     .subtitle {
         font-size: 1.5rem;
-        color: #d2b48c;
+        color: #ffffff;
         margin-bottom: 1rem;
     }
     .search-container {
         display: flex;
-        align-items: center;
+        align-items: flex;
         gap: 0.5rem;
         
     }
     
     .search-container input[type="text"] {
         padding: 0.4rem 1rem;
-        border: 1px solid #d2b48c;
+        border: 1px solid #ffffff;
         border-radius: 50px;
         color: #fff;
         background: rgba(255, 255, 255, 0.1);
@@ -411,7 +430,7 @@ footer a:hover {
     }
     
     .search-container button {
-        background-color: #d2b48c;
+        background-color: #ffffff;
         color: #333;
         border: none;
         border-radius: 50px;
@@ -423,23 +442,34 @@ footer a:hover {
     
     .search-icon {
         cursor: pointer;
-        color: #d2b48c;
+        color: #ffffff;
     }
     
-    .header-content {
-        display: none;
-    }
-    
-    .header-content a {
-        color: #d2b48c;
-        text-decoration: none;
-        margin: 0 15px;
-        font-weight: 500;
-        font-size: 1rem; /* Larger font size for better readability */
-        transition: color 0.3s, transform 0.3s; /* Smooth color and transform transition */
-    }
+
     
 }
+
+
+
+/* Responsive adjustments */
+@media (min-width: 800px) {
+    .header .logo img {
+        height: 40px;
+        width: auto;
+        margin-top: 12px;
+        margin-left: -145px;
+      }
+    }
+
+/* Responsive adjustments */
+@media (min-width: 1000px) {
+    .header .logo img {
+        height: 40px;
+        width: auto;
+        margin-top: 12px;
+        margin-left: -200px;
+      }
+    }
 
 /* Adjustments for mobile screens */
 @media (max-width: 767px) {
@@ -448,7 +478,7 @@ footer a:hover {
         right: 30%; /* Original right positioning */
         bottom: 50px; /* Move up the icons by increasing the bottom value */
         flex-direction: row; /* Change to row for mobile screens */
-        margin-bottom: 4460px; /* Reset margin for a cleaner look */
+        margin-bottom: 3570px; /* Reset margin for a cleaner look */
     }
 }
 
@@ -458,6 +488,7 @@ footer a:hover {
     text-align: center;
     padding: 2rem 1rem;
     color: #d2b48c;
+    margin-top: -80px;
 }
 
 .skills-grid {
@@ -468,8 +499,8 @@ footer a:hover {
 }
 
 .skill-card {
-    background-color: #555;
-    border-radius: 15px;
+    background-color: #222222;
+    border-radius: 30px;
     padding: 1rem;
     transition: transform 0.3s;
 }
@@ -510,6 +541,7 @@ footer a:hover {
 .about p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    margin-top: 0px;
 }
 
 .project-logo {
@@ -529,8 +561,10 @@ ul {
     overflow: hidden;
     margin: 20px auto; /* Center the image container */
     position: relative;
-    box-shadow: 0 0 10px #d2b48c; /* Initial soft glow */
+    box-shadow: 0 0 10px #005299; /* Initial soft glow */
     transition: box-shadow 0.3s ease; /* Smooth transition for glow */
+    margin-top: -20px;
+    margin-bottom: 20px;
 }
 
 .profile-image {
@@ -543,7 +577,7 @@ ul {
 
 /* Enhanced glowing effect on hover */
 .image-container:hover {
-    box-shadow: 0 0 20px #d2b48c, 0 0 40px #a08869, 0 0 60px #63523c; /* Stronger glow */
+    box-shadow: 0 0 20px #8ccad2, 0 0 40px #6985a0, 0 0 60px #3c4e63; /* Stronger glow */
     animation: pulse 1s infinite; /* Add pulsing animation on hover */
 }
 
@@ -554,13 +588,13 @@ ul {
 /* Pulse animation for the glow effect */
 @keyframes pulse {
     0% {
-        box-shadow: 0 0 20px #d2b48c, 0 0 40px #a08869, 0 0 60px #63523c;
+        box-shadow: 0 0 20px #8ca2d2, 0 0 40px #6981a0, 0 0 60px #005299;
     }
     50% {
-        box-shadow: 0 0 30px #d2b48c, 0 0 50px #a08869, 0 0 70px #63523c; /* Intensified glow */
+        box-shadow: 0 0 30px #8ca8d2, 0 0 50px #697ca0, 0 0 70px #005299; /* Intensified glow */
     }
     100% {
-        box-shadow: 0 0 20px #d2b48c, 0 0 40px #a08869, 0 0 60px #63523c;
+        box-shadow: 0 0 20px #8ca2d2, 0 0 40px #697aa0, 0 0 60px #005299;
     }
 }
 .graphic-work {
@@ -577,8 +611,8 @@ ul {
 
 .graphic-card {
     background: rgba(255, 255, 255, 0.1); /* Background color */
-    border-radius: 10px; /* Rounded corners */
-    padding: 1rem; /* Padding around the card */
+    border-radius: 30px; /* Rounded corners */
+    padding: 2rem; /* Padding around the card */
     text-align: center; /* Center text */
     align-items: center; /* Center horizontally */
     justify-content: center;
@@ -618,7 +652,7 @@ ul {
     max-width: 350px;
     margin: 0 auto;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 30px;
     background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -637,15 +671,16 @@ ul {
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    color: #000000;
 }
 
 .contact button {
-    color: #d2b48c;
-    border: 1px solid #d2b48c;
+    color: #ffffff;
+    border: 1px solid #ffffff;
     padding: 0.5rem 1.5rem;
     border-radius: 50px;
     background: none;
-    font-size: 1rem;
+    font-size: 1.1rem;
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
@@ -653,6 +688,6 @@ ul {
 }
 
 .contact button:hover {
-    background-color: #d2b48c;
-    color: #333;
+    background-color: #ffffff;
+    color: #000000;
 }

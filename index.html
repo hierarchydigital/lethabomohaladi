@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5RKR6W4M2H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-5RKR6W4M2H');
-</script>
-  <meta name="google-site-verification" content="e3wDJ3sB5f_u4Iq_bBjO8wwMYI0qB2GKxZx6oyEeXlE" />
   <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Me</a></li>
@@ -44,7 +34,7 @@
   <meta property="og:title" content="Lethabo Mohaladi - Front-End Developer & Graphic Designer | Hierarchy Digital">
   <meta property="og:description" content="Portfolio of Lethabo Mohaladi, a self-taught developer and designer, owner of Hierarchy Digital, offering web development and creative design services.">
   <meta property="og:image" content="https://hierarchydigital.github.io/lethabomohaladi/images/profile-image.jpg">
-  <meta property="og:url" content="https://hierarchydigital.github.io/lethabomohaladi/index.html">
+  <meta property="og:url" content="https://www.lethabomohaladi.online">
   <meta property="og:type" content="website">
 
   <!-- Twitter Meta Tags -->
@@ -54,13 +44,13 @@
   <meta name="twitter:image" content="https://hierarchydigital.github.io/lethabomohaladi/images/profile-image.jpg">
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://hierarchydigital.github.io/lethabomohaladi/index.html">
+  <link rel="canonical" href="https://www.lethabomohaladi.online">
 
   <!-- Favicons -->
-  <link rel="icon" href="IMAGES/lethabo.png" type="image/x-icon">
-  <link rel="apple-touch-icon" sizes="180x180" href="IMAGES/lethabo.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="IMAGES/lethabo.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="IMAGES/lethabo.png">
+  <link rel="icon" href="images/logo-white.png" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/logo-white.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/logo-white.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/logo-white.png">
 
 
 
@@ -71,7 +61,13 @@
 <body>
     <div id="particles-js"></div>
     <!-- Header -->
-    <header>
+    <header class="header">
+        <button class="menu-btn" onclick="toggleMenu()"></button>
+        <div class="logo">
+            <a href="#">
+                <img src="images/logo-white.png" alt="Oasis Events Logo" class="logo">
+            </a>
+        </div>
         <nav>
             <div class="menu-toggle">
               <div></div>
@@ -83,24 +79,22 @@
               <li><a href="#portfolio">Projects</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="search-container">
-                <input type="text" id="search" placeholder="Search...">
-                <img src="IMAGES\search24.png" alt="Search" class="search-icon" onclick="performSearch()">
-            </div>
           </nav>
+
+        </nav>
     </header>
 
     <!-- Hero Section -->
 
         <div class="social-links">
-            <a href="https://twitter.com/1lethxbo" target="_blank"><img src="IMAGES\x.png" alt="x"></a>
-            <a href="https://za.linkedin.com/in/lethabo-mohaladi-4387622a6?trk=people-guest_people_search-card" target="_blank"><img src="IMAGES\linkedin.png" alt="LinkedIn"></a>
-            <a href="https://instagram.com/1lethxbo" target="_blank"><img src="IMAGES\instagram.png" alt="Instagram"></a>
+            <a href="https://twitter.com/1lethxbo" target="_blank"><img src="images/x.png" alt="x"></a>
+            <a href="https://za.linkedin.com/in/lethabo-mohaladi-4387622a6?trk=people-guest_people_search-card" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://instagram.com/1lethxbo" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
         </div>
     </section>
     <section id="about" class="about">
         <div class="image-container">
-            <img src="IMAGES/amu.JPG" alt="Lethabo Mohaladi" class="profile-image">
+            <img src="images/amu.JPG" alt="Lethabo Mohaladi" class="profile-image">
         </div>
         <h1 id="typing-title"></h1>
         <p class="subtitle" id="typing-subtitle"></p>
@@ -112,32 +106,32 @@
     </section>
 <!-- Skills Section -->
 <section id="skills" class="skills">
-    <h2>My Coding Skills</h2>
+    <h1>Skills</h1>
     <h6>Long press box to move it around</h6>
     <div class="skills-grid">
         <!-- Skill Cards -->
         <div class="skill-card">
-            <img src="IMAGES\HTML5_logo_and_wordmark.svg.png" alt="HTML Logo" class="skill-logo">
+            <img src="images/HTML5_logo_and_wordmark.svg.png" alt="HTML Logo" class="skill-logo">
             <h3>HTML</h3>
         </div>
         <div class="skill-card">
-            <img src="IMAGES\csslogo.png" alt="CSS Logo" class="skill-logo">
+            <img src="images/csslogo.png" alt="CSS Logo" class="skill-logo">
             <h3>CSS</h3>
         </div>
         <div class="skill-card">
-            <img src="IMAGES\js.webp" alt="JavaScript Logo" class="skill-logo">
+            <img src="images/js.webp" alt="JavaScript Logo" class="skill-logo">
             <h3>JavaScript</h3>
         </div>
         <div class="skill-card">
-            <img src="IMAGES/Logomark_Full Color.svg" alt="Firebase Logo" class="skill-logo">
+            <img src="images/Logomark_Full Color.svg" alt="Firebase Logo" class="skill-logo">
             <h3>Firebase</h3>
         </div>
         <div class="skill-card">
-            <img src="IMAGES\Adobe_Photoshop_CC_icon.svg.png" alt="Adobe Photoshop Logo" class="skill-logo">
+            <img src="images/Adobe_Photoshop_CC_icon.svg.png" alt="Adobe Photoshop Logo" class="skill-logo">
             <h3>Adobe Photoshop</h3>
         </div>
         <div class="skill-card">
-            <img src="IMAGES\Adobe_Illustrator_CC_icon.svg.png" alt="Adobe Illustrator Logo" class="skill-logo">
+            <img src="images/Adobe_Illustrator_CC_icon.svg.png" alt="Adobe Illustrator Logo" class="skill-logo">
             <h3>Adobe Illustrator</h3>
         </div>
         <!-- Add more languages as needed -->
@@ -146,28 +140,23 @@
 
 <!-- Portfolio Section -->
 <section id="portfolio" class="projects">
-    <h2>My Projects</h2>
+    <h2>Projects</h2>
     <div class="project-grid">
         <!-- Project Cards -->
         <div class="project-card">
-            <img src="IMAGES/BROWN LOGO.png" alt="Quiz Brawl" class="project-logo">
+            <img src="images/BROWN LOGO.png" alt="Quiz Brawl" class="project-logo">
             <p class="project-description">An engaging quiz game to test your knowledge.</p>
             <a href="https://hierarchydigital.github.io/Quiz-Brawl/" class="pill-btn">View Project</a>
         </div>
         <div class="project-card">
-            <img src="IMAGES/DCS DRAFT WHT.png" alt="Destiny Construction" class="project-logo">
+            <img src="images/DCS DRAFT WHT.png" alt="Destiny Construction" class="project-logo">
             <p class="project-description">Your go-to platform for construction services.</p>
             <a href="https://www.destinyconstruction.online" class="pill-btn">View Project</a>
         </div>
         <div class="project-card">
-            <img src="IMAGES/whitelogo.png" alt="Alpha Code Editor" class="project-logo"> <!-- Update with actual logo path -->
+            <img src="images/whitelogo.png" alt="Alpha Code Editor" class="project-logo"> <!-- Update with actual logo path -->
             <p class="project-description">A powerful code editor featuring a built-in terminal for developers.</p>
             <a href="https://hierarchydigital.github.io/AlphaCodeEditor/" class="pill-btn">View Project</a> <!-- Update with actual URL -->
-        </div>
-        <div class="project-card">
-            <img src="https://img.icons8.com/ios/1000/google-wallet.png" alt="FinLume" class="project-logo"> <!-- Update with actual logo path -->
-            <p class="project-description">A modern financial management app designed for convenience and efficiency.</p>
-            <a href="https://hierarchydigital.github.io/FinLume/" class="pill-btn">View Project</a> <!-- Update with actual URL -->
         </div>
         <!-- Add more projects as needed -->
     </div>
@@ -176,19 +165,15 @@
         <div class="graphic-grid">
             <!-- Graphic Work Cards -->
             <div class="graphic-card">
-                <img src="IMAGES/BROWN LOGO.png" alt="Graphic Work 1" class="graphic-logo"> <!-- Update with actual graphic path -->
-                <p class="graphic-description">A modern logo design for a tech startup.</p>
+                <img src="images/short-white.png" alt="Graphic Work 1" class="graphic-logo"> <!-- Update with actual graphic path -->
+                <p class="graphic-description">A modern logo design for a South African Events Company.</p>
             </div>
             <div class="graphic-card">
-                <img src="IMAGES/HD GLOBE LOGO (WHITE FILL).png" alt="Graphic Work 2" class="graphic-logo"> <!-- Update with actual graphic path -->
+                <img src="images/HD GLOBE LOGO (WHITE FILL).png" alt="Graphic Work 2" class="graphic-logo"> <!-- Update with actual graphic path -->
                 <p class="graphic-description">A logo for a Digital/Design Company.</p>
             </div>
-            <div class="graphics-card">
-                <img src="IMAGES/ferg.png" alt="Graphic Work 3" class="graphics-logo"> <!-- Update with actual graphic path -->
-                <p class="graphics-description">A logo for a Real estate startup.</p>
-            </div>
             <div class="graphic-card">
-                <img src="IMAGES/MOHALADI CAPITAL HOLDINGS LOGO.png" alt="Graphic Work 3" class="graphic-logo"> <!-- Update with actual graphic path -->
+                <img src="images/MOHALADI CAPITAL HOLDINGS LOGO.png" alt="Graphic Work 3" class="graphic-logo"> <!-- Update with actual graphic path -->
                 <p class="graphic-description">A logo for a Holding company.</p>
             </div>
             <!-- Add more graphic works as needed -->
@@ -224,7 +209,7 @@
 
     <!-- Footer -->
     <footer id="contact">
-        <p>&copy; 2024 Lethabo Mohaladi | <a href="#contact">Contact Me</a></p>
+        <p>&copy; 2024 Lethabo Mohaladi | <a href="#contact">Connect with Me</a></p>
     </footer>
 
     <script src="script.js"></script>
@@ -270,20 +255,17 @@
       }
     }
   
-    // Form submission handler
+
     document.getElementById('contactForm').addEventListener('submit', function (e) {
       e.preventDefault();
   
-      // Capture form data
       const name = document.getElementById('name').value;
       const email = document.getElementById('email').value;
       const countryCode = document.getElementById('countryCode').value;
       const phone = document.getElementById('phone').value;
   
-      // Save data to Firestore
       saveContactData(name, email, countryCode, phone);
   
-      // Reset form
       document.getElementById('contactForm').reset();
     });
 

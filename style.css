@@ -251,7 +251,7 @@ nav a:hover {
 .social-links {
     position: absolute; /* Position it relative to the hero section */
     right: 20px; /* Align as needed */
-    bottom: 1100px; /* Adjust as needed */
+    bottom: 1050px; /* Adjust as needed */
     color: #d2b48c;
 }
 

@@ -233,7 +233,7 @@ document.querySelectorAll('.project-card img').forEach((img) => {
 
 document.addEventListener("DOMContentLoaded", function() {
     const titleText = "Hi, I'm Lethabo Mohaladi";
-    const subtitleText = "Front-End Developer & Graphic Designer";
+    const subtitleText = "Front-End Web Developer & Graphic Designer";
 
     function typeEffect(element, text, delay) {
         let index = 0;

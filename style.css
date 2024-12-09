@@ -521,9 +521,10 @@ footer a:hover {
     .social-links {
         position: absolute; /* Keep the absolute position on mobile */
         right: 30%; /* Original right positioning */
-        bottom: 50px; /* Move up the icons by increasing the bottom value */
+        bottom: 40px; /* Move up the icons by increasing the bottom value */
         flex-direction: row; /* Change to row for mobile screens */
         margin-bottom: 4990px; /* Reset margin for a cleaner look */
+        margin-top: 20px !important;
     }
 }
 

@@ -523,7 +523,7 @@ footer a:hover {
         right: 30%; /* Original right positioning */
         bottom: 35px; /* Move up the icons by increasing the bottom value */
         flex-direction: row; /* Change to row for mobile screens */
-        margin-bottom: 4990px; /* Reset margin for a cleaner look */
+        margin-bottom: 4960px !important; /* Reset margin for a cleaner look */
         margin-top: 40px !important;
     }
 }
